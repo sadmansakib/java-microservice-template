@@ -42,6 +42,7 @@ subprojects {
         implementation 'org.springframework.cloud:spring-cloud-starter'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
+        annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
     }
 }
 

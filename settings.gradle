@@ -15,4 +15,5 @@ pluginManagement {
 
 rootProject.name = 'microservice-template'
 include 'service-discovery'
+include 'config-server'
 

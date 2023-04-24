@@ -1,0 +1,13 @@
+jacoco {
+    version = "${jacocoVersion}"
+}
+
+jacocoTestReport {
+    executionData tasks.withType(Test)
+    classDirectories.from = files(sourceSets.main.output.classesDirs)
+    sourceDirectories.from = files(sourceSets.main.java.srcDirs)
+
+    reports {
+        xml.enabled = true
+    }
+}

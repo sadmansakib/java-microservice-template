@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo.spring.io/milestone' }
+        gradlePluginPortal()
+    }
+    plugins {
+        id ('org.springframework.boot') version "${springBootVersion}"
+        id ('io.spring.dependency-management') version "${springDependencyManagementVersion}"
+        id("org.sonarqube") version "${sonarqubePluginVersion}"
+    }
+}
+
+
+rootProject.name = 'microservice-template'
+include 'service-discovery'
+

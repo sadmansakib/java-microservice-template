@@ -4,6 +4,7 @@ plugins {
     id 'io.spring.dependency-management'
     id "org.sonarqube"
     id "jacoco"
+    id "com.google.cloud.tools.jib"
 }
 
 sonarqube {
@@ -22,6 +23,9 @@ subprojects {
         plugin('io.spring.dependency-management')
         plugin('org.springframework.boot')
         plugin('org.sonarqube')
+        plugin('com.google.cloud.tools.jib')
+
+        from('../gradle/docker.gradle')
     }
 
     sonarqube {

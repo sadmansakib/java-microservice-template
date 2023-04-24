@@ -5,9 +5,10 @@ pluginManagement {
         gradlePluginPortal()
     }
     plugins {
-        id ('org.springframework.boot') version "${springBootVersion}"
-        id ('io.spring.dependency-management') version "${springDependencyManagementVersion}"
+        id('org.springframework.boot') version "${springBootVersion}"
+        id('io.spring.dependency-management') version "${springDependencyManagementVersion}"
         id("org.sonarqube") version "${sonarqubePluginVersion}"
+        id('com.google.cloud.tools.jib') version "${jibPluginVersion}"
     }
 }
 

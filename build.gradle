@@ -43,9 +43,16 @@ subprojects {
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
         implementation 'org.springframework.cloud:spring-cloud-starter-bootstrap'
         annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+        implementation 'org.springframework.boot:spring-boot-starter-cache'
+        implementation "com.github.ben-manes.caffeine:caffeine:${caffeineCacheVersion}"
 
         if (project.name != "service-discovery"){
             implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+        }
+
+        if (project.name != "config-server" && project.name != "service-discovery"){
+            implementation 'org.springframework.cloud:spring-cloud-starter-config'
+            implementation 'org.springframework.boot:spring-boot-starter-actuator'
         }
     }
 }

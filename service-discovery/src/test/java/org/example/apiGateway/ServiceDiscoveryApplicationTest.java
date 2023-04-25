@@ -1,4 +1,4 @@
-package org.example;
+package org.example.apiGateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
